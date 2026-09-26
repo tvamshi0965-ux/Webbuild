@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EDUTECH</title>
+<style id="cm-base-css">.CodeMirror{font-family:monospace;height:300px;color:black;direction:ltr;}.CodeMirror-lines{padding:4px 0;}.CodeMirror pre.CodeMirror-line,.CodeMirror pre.CodeMirror-line-like{padding:0 4px;}.CodeMirror-scrollbar-filler,.CodeMirror-gutter-filler{background-color:white;}.CodeMirror-gutters{border-right:1px solid #ddd;background-color:#f7f7f7;white-space:nowrap;}.CodeMirror-linenumbers{}.CodeMirror-linenumber{padding:0 3px 0 5px;min-width:20px;text-align:right;color:#999;white-space:nowrap;}.CodeMirror-guttermarker{color:black;}.CodeMirror-guttermarker-subtle{color:#999;}.CodeMirror-cursor{border-left:1px solid black;border-right:none;width:0;}.CodeMirror div.CodeMirror-secondarycursor{border-left:1px solid silver;}.cm-fat-cursor .CodeMirror-cursor{width:auto;border:0 !important;background:#7e7;}.cm-fat-cursor div.CodeMirror-cursors{z-index:1;}.cm-fat-cursor .CodeMirror-line::selection,.cm-fat-cursor .CodeMirror-line > span::selection,.cm-fat-cursor .CodeMirror-line > span > span::selection{background:transparent;}.cm-fat-cursor .CodeMirror-line::-moz-selection,.cm-fat-cursor .CodeMirror-line > span::-moz-selection,.cm-fat-cursor .CodeMirror-line > span > span::-moz-selection{background:transparent;}.cm-fat-cursor{caret-color:transparent;}@-moz-keyframes blink{0%{}50%{background-color:transparent;}100%{}}@-webkit-keyframes blink{0%{}50%{background-color:transparent;}100%{}}@keyframes blink{0%{}50%{background-color:transparent;}100%{}}.CodeMirror-overwrite .CodeMirror-cursor{}.cm-tab{display:inline-block;text-decoration:inherit;}.CodeMirror-rulers{position:absolute;left:0;right:0;top:-50px;bottom:0;overflow:hidden;}.CodeMirror-ruler{border-left:1px solid #ccc;top:0;bottom:0;position:absolute;}.cm-s-default .cm-header{color:blue;}.cm-s-default .cm-quote{color:#090;}.cm-negative{color:#d44;}.cm-positive{color:#292;}.cm-header,.cm-strong{font-weight:bold;}.cm-em{font-style:italic;}.cm-link{text-decoration:underline;}.cm-strikethrough{text-decoration:line-through;}.cm-s-default .cm-keyword{color:#708;}.cm-s-default .cm-atom{color:#219;}.cm-s-default .cm-number{color:#164;}.cm-s-default .cm-def{color:#00f;}.cm-s-default .cm-variable,.cm-s-default .cm-punctuation,.cm-s-default .cm-property,.cm-s-default .cm-operator{}.cm-s-default .cm-variable-2{color:#05a;}.cm-s-default .cm-variable-3,.cm-s-default .cm-type{color:#085;}.cm-s-default .cm-comment{color:#a50;}.cm-s-default .cm-string{color:#a11;}.cm-s-default .cm-string-2{color:#f50;}.cm-s-default .cm-meta{color:#555;}.cm-s-default .cm-qualifier{color:#555;}.cm-s-default .cm-builtin{color:#30a;}.cm-s-default .cm-bracket{color:#997;}.cm-s-default .cm-tag{color:#170;}.cm-s-default .cm-attribute{color:#00c;}.cm-s-default .cm-hr{color:#999;}.cm-s-default .cm-link{color:#00c;}.cm-s-default .cm-error{color:#f00;}.cm-invalidchar{color:#f00;}.CodeMirror-composing{border-bottom:2px solid;}div.CodeMirror span.CodeMirror-matchingbracket{color:#0b0;}div.CodeMirror span.CodeMirror-nonmatchingbracket{color:#a22;}.CodeMirror-matchingtag{background:rgba(255,150,0,.3);}.CodeMirror-activeline-background{background:#e8f2ff;}.CodeMirror{position:relative;overflow:hidden;background:white;}.CodeMirror-scroll{overflow:scroll !important;margin-bottom:-50px;margin-right:-50px;padding-bottom:50px;height:100%;outline:none;position:relative;z-index:0;}.CodeMirror-sizer{position:relative;border-right:50px solid transparent;}.CodeMirror-vscrollbar,.CodeMirror-hscrollbar,.CodeMirror-scrollbar-filler,.CodeMirror-gutter-filler{position:absolute;z-index:6;display:none;outline:none;}.CodeMirror-vscrollbar{right:0;top:0;overflow-x:hidden;overflow-y:scroll;}.CodeMirror-hscrollbar{bottom:0;left:0;overflow-y:hidden;overflow-x:scroll;}.CodeMirror-scrollbar-filler{right:0;bottom:0;}.CodeMirror-gutter-filler{left:0;bottom:0;}.CodeMirror-gutters{position:absolute;left:0;top:0;min-height:100%;z-index:3;}.CodeMirror-gutter{white-space:normal;height:100%;display:inline-block;vertical-align:top;margin-bottom:-50px;}.CodeMirror-gutter-wrapper{position:absolute;z-index:4;background:none !important;border:none !important;}.CodeMirror-gutter-background{position:absolute;top:0;bottom:0;z-index:4;}.CodeMirror-gutter-elt{position:absolute;cursor:default;z-index:4;}.CodeMirror-gutter-wrapper::selection{background-color:transparent}.CodeMirror-gutter-wrapper::-moz-selection{background-color:transparent}.CodeMirror-lines{cursor:text;min-height:1px;}.CodeMirror pre.CodeMirror-line,.CodeMirror pre.CodeMirror-line-like{-moz-border-radius:0;-webkit-border-radius:0;border-radius:0;border-width:0;background:transparent;font-family:inherit;font-size:inherit;margin:0;white-space:pre;word-wrap:normal;line-height:inherit;color:inherit;z-index:2;position:relative;overflow:visible;-webkit-tap-highlight-color:transparent;-webkit-font-variant-ligatures:contextual;font-variant-ligatures:contextual;}.CodeMirror-wrap pre.CodeMirror-line,.CodeMirror-wrap pre.CodeMirror-line-like{word-wrap:break-word;white-space:pre-wrap;word-break:normal;}.CodeMirror-linebackground{position:absolute;left:0;right:0;top:0;bottom:0;z-index:0;}.CodeMirror-linewidget{position:relative;z-index:2;padding:0.1px;}.CodeMirror-widget{}.CodeMirror-rtl pre{direction:rtl;}.CodeMirror-code{outline:none;}.CodeMirror-scroll,.CodeMirror-sizer,.CodeMirror-gutter,.CodeMirror-gutters,.CodeMirror-linenumber{-moz-box-sizing:content-box;box-sizing:content-box;}.CodeMirror-measure{position:absolute;width:100%;height:0;overflow:hidden;visibility:hidden;}.CodeMirror-cursor{position:absolute;pointer-events:none;}.CodeMirror-measure pre{position:static;}div.CodeMirror-cursors{visibility:hidden;position:relative;z-index:3;}div.CodeMirror-dragcursors{visibility:visible;}.CodeMirror-focused div.CodeMirror-cursors{visibility:visible;}.CodeMirror-selected{background:#d9d9d9;}.CodeMirror-focused .CodeMirror-selected{background:#d7d4f0;}.CodeMirror-crosshair{cursor:crosshair;}.CodeMirror-line::selection,.CodeMirror-line > span::selection,.CodeMirror-line > span > span::selection{background:#d7d4f0;}.CodeMirror-line::-moz-selection,.CodeMirror-line > span::-moz-selection,.CodeMirror-line > span > span::-moz-selection{background:#d7d4f0;}.cm-searching{background-color:#ffa;background-color:rgba(255,255,0,.4);}.cm-force-border{padding-right:.1px;}@media print{.CodeMirror div.CodeMirror-cursors{visibility:hidden;}}.cm-tab-wrap-hack:after{content:'';}span.CodeMirror-selectedtext{background:none;}
+.CodeMirror-hints{position:absolute;z-index:10;overflow:hidden;list-style:none;margin:0;padding:2px;-webkit-box-shadow:2px 3px 5px rgba(0,0,0,.2);-moz-box-shadow:2px 3px 5px rgba(0,0,0,.2);box-shadow:2px 3px 5px rgba(0,0,0,.2);border-radius:3px;border:1px solid silver;background:white;font-size:90%;font-family:monospace;max-height:20em;overflow-y:auto;box-sizing:border-box;}.CodeMirror-hint{margin:0;padding:0 4px;border-radius:2px;white-space:pre;color:black;cursor:pointer;}li.CodeMirror-hint-active{background:#08f;color:white;}</style>
+<style>
+:root{
+  --bg:#f5f4fb; --panel:#ffffff; --text:#1c1730; --sub:#6f6a85;
+  --border:#e1ddf2; --accent-text:#ffffff;
+  --editor-bg:#1c1630; --editor-text:#e9e6f7; --console-bg:#140f24;
+  --html-c:#ff7a59; --css-c:#3d8bff; --js-c:#ffcc33; --react-c:#61dafb; --cpp-c:#ff5c9e;
+  --grad: linear-gradient(90deg,#ff7a59,#ffcc33,#61dafb,#7c6cff,#ff5c9e);
+  --font-ui: "Segoe UI", system-ui, sans-serif;
+  --font-mono: "SF Mono", "Cascadia Code", Consolas, monospace;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --bg:#14101f; --panel:#1b1630; --text:#f1eefc; --sub:#a8a2c4; --border:#332b52; }
+}
+:root[data-theme="dark"]{ --bg:#14101f; --panel:#1b1630; --text:#f1eefc; --sub:#a8a2c4; --border:#332b52; }
+*{box-sizing:border-box;}
+html,body{height:100%;margin:0;}
+body{ background:var(--bg); color:var(--text); font-family:var(--font-ui); display:flex; flex-direction:column; height:100%; overflow:hidden; }
+.gradbar{ height:4px; width:100%; background:var(--grad); background-size:300% 100%; animation:flow 6s linear infinite; }
+@keyframes flow{ 0%{background-position:0% 0;} 100%{background-position:300% 0;} }
+header{ padding:14px 18px; padding-top:calc(14px + env(safe-area-inset-top,0px)); border-bottom:1px solid var(--border); display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+h1{ font-size:17px; font-weight:800; margin:0; letter-spacing:.01em; background:var(--grad); background-size:300% 100%; -webkit-background-clip:text; background-clip:text; color:transparent; animation:flow 6s linear infinite; }
+.modes{display:flex; gap:4px; background:var(--bg); padding:3px; border-radius:10px; border:1px solid var(--border);}
+.mode-btn{ border:none; background:transparent; color:var(--sub); font:inherit; font-size:13px; padding:7px 14px; border-radius:8px; cursor:pointer; font-weight:600; display:flex; align-items:center; gap:7px; transition:transform .15s ease, color .15s ease; }
+.mode-btn:hover{ transform:translateY(-1px); color:var(--text); }
+.mode-btn .dot{width:8px; height:8px; border-radius:50%; background:var(--dotc); transition:transform .2s ease;}
+.mode-btn.active{ background:var(--panel); color:var(--text); box-shadow:0 2px 10px rgba(0,0,0,.12); }
+.mode-btn.active .dot{ transform:scale(1.3); box-shadow:0 0 8px var(--dotc); }
+.spacer{flex:1;}
+button.run{ background:var(--grad); background-size:220% 100%; color:#140f24; border:none; border-radius:9px; font:inherit; font-size:13.5px; font-weight:800; padding:9px 18px; cursor:pointer; transition:transform .12s ease, box-shadow .2s ease; box-shadow:0 3px 14px rgba(124,108,255,.35); }
+button.run:hover{ transform:translateY(-2px) scale(1.02); background-position:100% 0; }
+button.run:active{ transform:translateY(0) scale(.98); }
+button.run.running{ animation:pulse 1s ease-in-out infinite; }
+@keyframes pulse{ 0%,100%{opacity:1;} 50%{opacity:.6;} }
+main{flex:1; display:flex; min-height:0;}
+.pane{flex:1; display:flex; flex-direction:column; min-width:0; min-height:0;}
+.pane.editor-pane{border-right:1px solid var(--border);}
+.filetabs{display:flex; gap:2px; padding:8px 10px 0; background:var(--panel); border-bottom:1px solid var(--border);}
+.filetab{ border:none; background:transparent; color:var(--sub); font:inherit; font-size:12.5px; padding:7px 12px; cursor:pointer; border-radius:6px 6px 0 0; font-family:var(--font-mono); border-bottom:2px solid transparent; transition:color .15s ease, border-color .15s ease; }
+.filetab.active{ color:var(--tabc); border-bottom:2px solid var(--tabc); background:var(--editor-bg); }
+#editor-container{ flex:1; min-height:0; }
+.CodeMirror{ height:100%; background:var(--editor-bg); color:var(--editor-text); font-family:var(--font-mono); font-size:13.5px; line-height:1.6; }
+.CodeMirror-gutters{ background:var(--editor-bg); border:none; }
+.CodeMirror-cursor{ border-left:2px solid var(--js-c); }
+.CodeMirror-selected{ background:rgba(124,108,255,.35) !important; }
+.cm-keyword{ color:#ff9d6e; } .cm-string, .cm-string-2{ color:#a8e6a3; } .cm-comment{ color:#7a7397; font-style:italic; }
+.cm-number{ color:#ffd166; } .cm-tag{ color:#ff7a9e; } .cm-attribute{ color:#7ec9ff; } .cm-property{ color:#7ec9ff; }
+.cm-variable, .cm-variable-2{ color:#e9e6f7; } .cm-def{ color:#61dafb; } .cm-atom{ color:#c8a2ff; } .cm-builtin{ color:#61dafb; }
+.CodeMirror-hints{ background:var(--panel); border:1px solid var(--border); border-radius:8px; font-family:var(--font-mono); font-size:12.5px; box-shadow:0 8px 24px rgba(0,0,0,.25); padding:4px; }
+.CodeMirror-hint{ color:var(--text); padding:5px 10px; border-radius:5px; }
+li.CodeMirror-hint-active{ background:var(--grad); color:#140f24; }
+.output-pane{background:var(--panel);}
+.output-bar{ padding:8px 14px; font-size:12px; color:var(--sub); border-bottom:1px solid var(--border); font-family:var(--font-mono); display:flex; justify-content:space-between; }
+#outStatus.done{ color:#3ecf8e; } #outStatus.error{ color:#ff6b81; } #outStatus.running{ color:#ffcc33; }
+iframe{flex:1; width:100%; border:none; background:#fff; animation:fadein .35s ease;}
+.console{ flex:1; background:var(--console-bg); color:#d7f4e6; font-family:var(--font-mono); font-size:13px; padding:14px 16px; margin:0; overflow:auto; white-space:pre-wrap; word-break:break-word; animation:fadein .35s ease; }
+@keyframes fadein{ from{opacity:0; transform:translateY(3px);} to{opacity:1; transform:none;} }
+@media (max-width:760px){
+  main{flex-direction:column;}
+  .pane.editor-pane{border-right:none; border-bottom:1px solid var(--border); flex:1 1 45%;}
+  .output-pane{flex:1 1 45%;}
+}
+</style>
+</head>
+<body>
+<div class="gradbar"></div>
+<header>
+  <h1>EDUTECH</h1>
+  <div class="modes" role="tablist">
+    <button class="mode-btn active" data-mode="web" style="--dotc:var(--html-c)"><span class="dot"></span>HTML/CSS/JS</button>
+    <button class="mode-btn" data-mode="react" style="--dotc:var(--react-c)"><span class="dot"></span>React</button>
+    <button class="mode-btn" data-mode="cpp" style="--dotc:var(--cpp-c)"><span class="dot"></span>C++</button>
+  </div>
+  <div class="spacer"></div>
+  <button class="run" id="runBtn">Run ▸</button>
+</header>
+<main>
+  <section class="pane editor-pane">
+    <div class="filetabs" id="fileTabs"></div>
+    <div id="editor-container"></div>
+  </section>
+  <section class="pane output-pane">
+    <div class="output-bar"><span id="outLabel">Preview</span><span id="outStatus"></span></div>
+    <iframe id="preview" sandbox="allow-scripts allow-modals"></iframe>
+    <pre class="console" id="console" hidden></pre>
+  </section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/jsx/jsx.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/show-hint.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/xml-hint.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/html-hint.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/css-hint.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/javascript-hint.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/hint/anyword-hint.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/edit/closebrackets.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/edit/closetag.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/edit/matchbrackets.min.js"></script>
+
+<script>
+const SAMPLES = {
+  web: {
+    html: `<h1>Hello, world</h1>\n<p>Edit the HTML, CSS or JS tabs, then hit Run.</p>\n<button id="btn">Click me</button>\n<p id="count">0 clicks</p>`,
+    css: `body{ font-family: system-ui, sans-serif; padding: 2rem; color:#222; }\nbutton{ padding:.5rem 1rem; font-size:1rem; cursor:pointer; }`,
+    js: `let n = 0;\ndocument.getElementById('btn').addEventListener('click', () => {\n  n++;\n  document.getElementById('count').textContent = n + ' clicks';\n});`
+  },
+  react: {
+    jsx: `function App() {\n  const [count, setCount] = React.useState(0);\n  return (\n    <div style={{fontFamily:'system-ui', padding:'2rem'}}>\n      <h1>React Playground</h1>\n      <p>You clicked {count} times.</p>\n      <button onClick={() => setCount(count + 1)}>Click me</button>\n    </div>\n  );\n}\nReactDOM.createRoot(document.getElementById('root')).render(<App />);`
+  },
+  cpp: {
+    code: `#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << "Hello, world!" << endl;\n    for (int i = 1; i <= 5; i++) {\n        cout << "i = " << i << endl;\n    }\n    return 0;\n}`
+  }
+};
+
+const FILE_COLORS = { html:'var(--html-c)', css:'var(--css-c)', js:'var(--js-c)' };
+const MODE_CONFIG = {
+  html:  { mode:'htmlmixed', hint:'html' },
+  css:   { mode:'css', hint:'css' },
+  js:    { mode:'javascript', hint:'javascript' },
+  jsx:   { mode:{name:'jsx'}, hint:'anyword' },
+  cpp:   { mode:'text/x-c++src', hint:'anyword' }
+};
+
+let mode = 'web';
+let webFile = 'html';
+const code = { web: {...SAMPLES.web}, react: {...SAMPLES.react}, cpp: {...SAMPLES.cpp} };
+
+const fileTabs = document.getElementById('fileTabs');
+const preview = document.getElementById('preview');
+const consoleEl = document.getElementById('console');
+const outLabel = document.getElementById('outLabel');
+const outStatus = document.getElementById('outStatus');
+const runBtn = document.getElementById('runBtn');
+
+const cm = CodeMirror(document.getElementById('editor-container'), {
+  value: '', mode: 'htmlmixed', theme: 'default',
+  lineNumbers: true, indentUnit: 2, tabSize: 2, indentWithTabs: false,
+  autoCloseBrackets: true, autoCloseTags: true, matchBrackets: true,
+  extraKeys: {
+    'Ctrl-Space': 'autocomplete',
+    'Tab': cm => cm.replaceSelection('  '),
+    'Shift-1': cm => {
+      if(currentHintKey() !== 'html') return CodeMirror.Pass;
+      const startLine = cm.getCursor().line;
+      const boilerplate =
+`<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>`;
+      cm.replaceSelection(boilerplate);
+      cm.setCursor({ line: startLine + 8, ch: 2 });
+      cm.focus();
+    }
+  }
+});
+
+function currentHintKey(){
+  if(mode === 'web') return webFile;
+  if(mode === 'react') return 'jsx';
+  return 'cpp';
+}
+
+function debounce(fn, ms){
+  let t;
+  return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); };
+}
+
+function autoRun(){
+  if(mode === 'web') runWeb();
+  else if(mode === 'react') runReact();
+  // C++ still requires an explicit Run (it executes rather than previews)
+}
+
+const debouncedAutoRun = debounce(() => { saveCurrent(); autoRun(); }, 450);
+cm.on('change', debouncedAutoRun);
+
+cm.on('inputRead', (instance, change) => {
+  if(change.text.length !== 1) return;
+  const ch = change.text[0];
+  if(!/[\w.<]/.test(ch)) return;
+  const key = currentHintKey();
+  const hintName = MODE_CONFIG[key].hint;
+  const hintFn = CodeMirror.hint[hintName] || CodeMirror.hint.anyword;
+  CodeMirror.showHint(instance, hintFn, { completeSingle: false });
+});
+
+function renderFileTabs(){
+  fileTabs.innerHTML = '';
+  if(mode === 'web'){
+    fileTabs.hidden = false;
+    ['html','css','js'].forEach(f=>{
+      const b = document.createElement('button');
+      b.className = 'filetab' + (f===webFile ? ' active' : '');
+      b.style.setProperty('--tabc', FILE_COLORS[f]);
+      b.textContent = f.toUpperCase();
+      b.onclick = () => { code.web[webFile] = cm.getValue(); webFile = f; loadEditor(); };
+      fileTabs.appendChild(b);
+    });
+  } else {
+    fileTabs.hidden = true;
+  }
+}
+
+function loadEditor(){
+  renderFileTabs();
+  const key = currentHintKey();
+  cm.setOption('mode', MODE_CONFIG[key].mode);
+  if(mode === 'web') cm.setValue(code.web[webFile]);
+  else if(mode === 'react') cm.setValue(code.react.jsx);
+  else cm.setValue(code.cpp.code);
+  setTimeout(()=>cm.refresh(), 0);
+}
+
+document.querySelectorAll('.mode-btn').forEach(btn=>{
+  btn.onclick = () => {
+    saveCurrent();
+    document.querySelectorAll('.mode-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    mode = btn.dataset.mode;
+    loadEditor();
+    switchOutputView();
+    autoRun();
+  };
+});
+
+function saveCurrent(){
+  if(mode === 'web') code.web[webFile] = cm.getValue();
+  else if(mode === 'react') code.react.jsx = cm.getValue();
+  else code.cpp.code = cm.getValue();
+}
+
+function switchOutputView(){
+  if(mode === 'cpp'){ preview.hidden = true; consoleEl.hidden = false; outLabel.textContent = 'Console'; }
+  else { preview.hidden = false; consoleEl.hidden = true; outLabel.textContent = 'Preview'; }
+  outStatus.textContent = ''; outStatus.className = '';
+}
+
+function runWeb(){
+  const h = code.web.html, c = code.web.css, j = code.web.js;
+  const doc = `<!DOCTYPE html><html><head><meta charset="UTF-8"><style>${c}</style></head><body>${h}<script>${j}<\/script></body></html>`;
+  preview.srcdoc = doc;
+  outStatus.textContent = '● Live'; outStatus.className = 'done';
+}
+
+function runReact(){
+  const jsx = code.react.jsx;
+  const doc = `<!DOCTYPE html><html><head><meta charset="UTF-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"><\/script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"><\/script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"><\/script>
+  <style>body{font-family:system-ui,sans-serif;margin:0;}</style>
+  </head><body>
+  <div id="root"></div>
+  <script type="text/babel" data-presets="react">
+  ${jsx}
+  <\/script>
+  </body></html>`;
+  preview.srcdoc = doc;
+  outStatus.textContent = '● Live'; outStatus.className = 'done';
+}
+
+let jscppPromise = null;
+function loadJSCPP(){
+  if(!jscppPromise) jscppPromise = import('https://cdn.jsdelivr.net/npm/JSCPP/+esm');
+  return jscppPromise;
+}
+
+async function runCpp(){
+  consoleEl.textContent = '';
+  outStatus.textContent = 'Running…'; outStatus.className = 'running';
+  runBtn.classList.add('running');
+  let out = '';
+  try{
+    const modu = await loadJSCPP();
+    const JSCPP = modu.default || modu;
+    JSCPP.run(code.cpp.code, '', {
+      stdio: { write(s){ out += s; }, drain(){ return ''; } },
+      unsigned_overflow: 'warn'
+    });
+    consoleEl.textContent = out || '(program produced no output)';
+    outStatus.textContent = 'Done'; outStatus.className = 'done';
+  } catch(err){
+    consoleEl.textContent = (out ? out + '\n' : '') + '--- Error ---\n' + (err && err.message ? err.message : String(err));
+    outStatus.textContent = 'Error'; outStatus.className = 'error';
+  }
+  runBtn.classList.remove('running');
+}
+
+runBtn.onclick = () => {
+  saveCurrent();
+  if(mode === 'web') runWeb();
+  else if(mode === 'react') runReact();
+  else runCpp();
+};
+
+loadEditor();
+switchOutputView();
+runWeb();
+</script>
+</body>
+</html>
