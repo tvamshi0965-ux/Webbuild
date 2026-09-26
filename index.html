@@ -182,6 +182,20 @@ function currentHintKey(){
   return 'cpp';
 }
 
+function debounce(fn, ms){
+  let t;
+  return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); };
+}
+
+function autoRun(){
+  if(mode === 'web') runWeb();
+  else if(mode === 'react') runReact();
+  // C++ still requires an explicit Run (it executes rather than previews)
+}
+
+const debouncedAutoRun = debounce(() => { saveCurrent(); autoRun(); }, 450);
+cm.on('change', debouncedAutoRun);
+
 cm.on('inputRead', (instance, change) => {
   if(change.text.length !== 1) return;
   const ch = change.text[0];
@@ -227,6 +241,7 @@ document.querySelectorAll('.mode-btn').forEach(btn=>{
     mode = btn.dataset.mode;
     loadEditor();
     switchOutputView();
+    autoRun();
   };
 });
 
@@ -246,7 +261,7 @@ function runWeb(){
   const h = code.web.html, c = code.web.css, j = code.web.js;
   const doc = `<!DOCTYPE html><html><head><meta charset="UTF-8"><style>${c}</style></head><body>${h}<script>${j}<\/script></body></html>`;
   preview.srcdoc = doc;
-  outStatus.textContent = 'Done'; outStatus.className = 'done';
+  outStatus.textContent = '● Live'; outStatus.className = 'done';
 }
 
 function runReact(){
@@ -263,7 +278,7 @@ function runReact(){
   <\/script>
   </body></html>`;
   preview.srcdoc = doc;
-  outStatus.textContent = 'Done'; outStatus.className = 'done';
+  outStatus.textContent = '● Live'; outStatus.className = 'done';
 }
 
 let jscppPromise = null;
